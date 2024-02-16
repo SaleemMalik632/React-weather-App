@@ -1,26 +1,21 @@
-# Getting Started with Create React App
+# React Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React weather application that allows users to select a country and view its current weather information. It utilizes the OpenWeatherMap API to fetch weather data based on the selected country.
 
-## Available Scripts
+Live Demo: [React Weather App Demo](https://react-weather-app-tau-pearl.vercel.app)
 
-In the project directory, you can run:
+## Overview
 
-## npm start
+The React Weather App provides the following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Country Selection**: Users can select a country from the provided dropdown menu.
+- **Weather Information**: Upon selecting a country, the app displays the current weather information for that country, including temperature, humidity, wind speed, and weather description.
+- **Responsive Design**: The user interface is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-## npm run build
+To use the React Weather App:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-## live
-[https://react-weather-app-tau-pearl.vercel.app/](https://react-weather-app-tau-pearl.vercel.app/)
+1. Visit the [live demo](https://react-weather-app-tau-pearl.vercel.app) or clone this repository to your local machine.
+   ```bash
+   git clone https://github.com/SaleemMalik632React-weather-App.git
