@@ -1,0 +1,38 @@
+/*Primary color*/
+
+$Orange: hsl(26, 100%, 55%);
+$PaleOrange: hsl(27, 82%, 96%);
+$white: hsl(0, 0%, 100%);
+$VeryDarkblue: hsl(220, 13%, 13%);
+$Dark-greyishBlue: hsl(219, 9%, 45%);
+$greyishBlue: hsl(220, 14%, 75%);
+$LightGreyishBlue: hsl(223, 64%, 98%);
+
+$large_screen: 900px;
+
+$medium_screen: 650px;
+
+$medium_screenl: 1200px;
+$Smallest: 259px;
+@mixin Smallest {
+  @media (max-width: $medium_screenl) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $large_screen) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (min-width: $medium_screen) {
+    @content;
+  }
+}
+
+@mixin lmedium {
+  @media (min-width: $medium_screenl) {
+    @content;
+  }
+}

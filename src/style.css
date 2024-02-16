@@ -1,0 +1,34 @@
+body {
+    background-color: #87CEEB; /* Sky Blue */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* Weather card class  */
+
+/* borderRadius: 20,
+boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+width: '70%',
+height: '80%',
+padding: '20px', */
+
+.card {
+    background-color: #4B515D;
+    border:1px solid #4B515D;
+    border-radius: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    height: 80%;
+    color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.weatherIcon {
+    font-size: 60px;
+}
+

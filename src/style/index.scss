@@ -1,0 +1,337 @@
+@import "./reset";
+@import "./variable";
+body {
+  background-color: white;
+}
+main {
+  width: min(90%, 1000px);
+  margin: 0 auto;
+}
+.logo {
+  margin-inline: 10px;
+  @include medium {
+    margin-inline: unset;
+  }
+}
+.avater-cart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  .cart {
+    cursor: pointer;
+  }
+
+  .avatar {
+    height: 40px;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid $Orange;
+      border-radius: 50%;
+    }
+  }
+}
+.hamburger {
+  z-index: 20;
+}
+header {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5em;
+  margin-bottom: 2em;
+  border-bottom: 1px solid $greyishBlue;
+  img {
+    width: unset;
+  }
+  @include medium {
+    margin-bottom: 0;
+    .hamburger {
+      display: none;
+    }
+  }
+}
+.hamMenu nav {
+  display: block;
+}
+.hamMenu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  width: 50vw;
+  height: 100vh;
+  z-index: 5;
+
+  ul {
+    flex-direction: column;
+    margin-top: 6em;
+    margin-left: 5%;
+    isolation: isolate;
+  }
+  li {
+    margin-bottom: 1em;
+  }
+}
+
+nav {
+  display: none;
+  ul {
+    display: flex;
+    gap: 1em;
+  }
+  @include medium {
+    display: block;
+  }
+}
+
+.flexHero {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-direction: column;
+
+  @include medium {
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding-block: 4em;
+  }
+  @include large {
+    gap: 2em;
+  }
+}
+img {
+  width: 100%;
+}
+
+// image styling
+.desktop {
+  display: none;
+  @include medium {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    &-flex {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      gap: 1em;
+      img {
+        width: 100px;
+      }
+    }
+  }
+}
+.smallImg {
+  &:hover {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.5;
+    outline: 5px solid $Orange;
+  }
+}
+.Mbig-img {
+  height: 40vh;
+  object-fit: cover;
+}
+.mobileImg-hero {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include medium {
+    display: none;
+  }
+}
+.right-arrow {
+  position: absolute;
+  right: 20px;
+}
+.left-arrow {
+  position: absolute;
+  left: 20px;
+}
+.left-arrow,
+.right-arrow {
+  background-color: white;
+  color: $VeryDarkblue;
+  border-radius: 50%;
+  padding: 2px;
+}
+/// typography
+.info {
+  h4 {
+    color: $Orange;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+  }
+  h2 {
+    color: $VeryDarkblue;
+    margin-bottom: 1em;
+  }
+  p {
+    color: $Dark-greyishBlue;
+    margin-bottom: 2em;
+  }
+  h3 {
+    color: $VeryDarkblue;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  span {
+    color: $Orange;
+    background-color: $PaleOrange;
+    padding: 0.2em;
+    font-size: 0.7em;
+  }
+
+  .Add,
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Add {
+    background-color: $LightGreyishBlue;
+    padding: 0.8em;
+    border-radius: 10px;
+    @include medium {
+      padding-block: 0.8em;
+      padding-inline: 0.5em;
+    }
+  }
+  .price {
+    margin-bottom: 1.5em;
+    @include medium {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5em;
+    }
+    p {
+      margin-bottom: unset;
+      text-decoration: line-through;
+    }
+  }
+  .btn-add {
+    color: $Orange;
+    font-size: 1.2rem;
+    margin-inline: 20px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .cart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+
+    @include medium {
+      flex-direction: row;
+      gap: 1em;
+    }
+  }
+
+  img {
+    width: unset;
+  }
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 0.8em;
+  border: unset;
+  background-color: $Orange;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0px 6px 5px 2px $PaleOrange;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
+  @include medium {
+    padding-block: 0.8em;
+    padding-inline: 2em;
+  }
+}
+// cart-card design
+.cart-card {
+  position: absolute;
+  top: 100px;
+  right: 12.5%;
+  z-index: 200;
+  height: fit-content;
+  width: 75%;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  @include medium {
+    right: unset;
+    top: 70px;
+    width: 350px;
+    box-shadow: 0px 6px 5px 2px rgba($color: #000000, $alpha: 0.2);
+  }
+  hr {
+    margin-block: 1em;
+  }
+}
+.ctcheck {
+  display: flex;
+  flex-direction: column;
+}
+.ctinfo-flex {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  margin-bottom: 1em;
+  span {
+    color: $VeryDarkblue;
+    font-weight: 600;
+  }
+  p {
+    color: $Dark-greyishBlue;
+  }
+  img {
+    width: 70px;
+    border-radius: 5px;
+  }
+}
+.p-empty {
+  text-align: center;
+}
+// Alert Count
+.avater-pos {
+  position: relative;
+}
+.alert-count {
+  position: absolute;
+  top: -9px;
+  right: 5px;
+  color: white;
+  background-color: $Orange;
+  border-radius: 20%;
+  padding: 0 1px;
+}
+nav li {
+  position: relative;
+  color: $Dark-greyishBlue;
+  &:hover {
+    color: $VeryDarkblue;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      bottom: -36px;
+      left: 0;
+      background-color: $Orange;
+    }
+  }
+}
