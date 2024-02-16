@@ -18,4 +18,4 @@ To use the React Weather App:
 
 1. Visit the [live demo](https://react-weather-app-tau-pearl.vercel.app) or clone this repository to your local machine.
    ```bash
-   git clone https://github.com/SaleemMalik632React-weather-App.git
+   git clone https://github.com/SaleemMalik632/React-weather-App.git
