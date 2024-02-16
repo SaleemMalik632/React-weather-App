@@ -30,7 +30,7 @@ const WeatherComponent = ({ CountryName }) => {
                 setWeatherData(data);
                 console.log('Weather data:', data);
                 return;
-            }
+            } 
         } catch (error) {
             console.error('Error fetching weather data:', error);
         }
@@ -85,7 +85,7 @@ const WeatherComponent = ({ CountryName }) => {
                                     <BeachAccessIcon sx={{ fontSize: 30 }} /> Sea Level: {weatherData.main.sea_level || '-'} hPa
                                 </Typography>
                                 <Typography variant="body1">
-                                    <WavesIcon sx={{ fontSize: 30 }} /> Ground Level: {weatherData.main.grnd_level || '-'} hPa
+                                    <WavesIcon sx={{ fontSize: 30 }} /> Top Ground Level: {weatherData.main.grnd_level || '-'} hPa
                                 </Typography>
                                 <Typography variant="body1">
                                     <DeviceThermostatIcon sx={{ fontSize: 30 }} /> Max Temperature: {weatherData.main.temp_max || '-'}°C
